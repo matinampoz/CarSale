@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84124b39-2330-46a5-9c8b-284564e791e2" name="Changes" comment="add class sale">
-      <change afterPath="$PROJECT_DIR$/NewCarSale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CorporateCustomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CustomerSalesDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CorporateCostomer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Costomer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CostomerSalesDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NewCarSale.java" beforeDir="false" afterPath="$PROJECT_DIR$/NewCarSale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sale.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsedCarSale.java" beforeDir="false" afterPath="$PROJECT_DIR$/UsedCarSale.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +44,9 @@
     &quot;accountId&quot;: &quot;32943db3-e2e4-4087-bac7-0b14c48ba3bc&quot;
   }
 }</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
   <component name="ProjectId" id="2f85btDneaURGhYtEN5kby6tyct" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -43,16 +55,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/matin/IdeaProjects/CarSale/src/main/java/org/example/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/CarSale",
+    "onboarding.tips.debug.path": "C:/Users/matin/IdeaProjects/CarSale/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

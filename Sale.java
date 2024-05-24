@@ -1,13 +1,25 @@
 abstract public class Sale {
-    private String dateOfSale;
-    private String makeOfcar;
+    private String date;
+    private String manufacturer;
     private double price;
 
-    public int getmodelYear(){
-
+    public Sale(String date, String manufacturer, double price) {
+        this.date = date;
+        this.manufacturer = manufacturer;
+        this.price = price;
     }
 
-    public void toString(){
-
+    public String getDate() {
+        return date;
     }
+
+    public String getManufacturer() {
+        return manufacturer;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public abstract int getModelYear();
 }
