@@ -5,7 +5,7 @@ public class CustomerSalesDB {
     private List<Customer> customers;
 
     public CustomerSalesDB() {
-        customers = new ArrayList<>();
+        List<Customer> customers = new ArrayList<>();
     }
 
     public int getNoOfCustomers() {
