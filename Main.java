@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         CustomerSalesDB db = new CustomerSalesDB();
@@ -8,17 +10,37 @@ public class Main {
         db.newCustomer(individualCustomer);
         db.newCustomer(corporateCustomer);
 
-        Sale newCarSale1 = new NewCarSale("10/08/2010", "Opel Astra 1.6", 19000.0);
-        Sale usedCarSale1 = new UsedCarSale("15/05/2009", "Alfa Romeo 156 1.8 TS", 12000.0, 2000, "34.500 km., ηλεκτρικά παράθυρα, συναγερμός, κλιματισμός, CD");
+        Sale newCarSale1 = new NewCarSale.Builder()
+                .date("10/08/2010")
+                .manufacturer("Opel Astra 1.6")
+                .price(19000.0)
+                .build();
+        Sale usedCarSale1 = new UsedCarSale.Builder()
+                .date("15/05/2009")
+                .manufacturer("Alfa Romeo 156 1.8 TS")
+                .price(12000.0)
+                .modelYear(2000)
+                .conditionDescription("34.500 km., ηλεκτρικά παράθυρα, συναγερμός, κλιματισμός, CD")
+                .build();
         db.newSale(0, newCarSale1);
         db.newSale(0, usedCarSale1);
 
-        Sale usedCarSale2 = new UsedCarSale("12/07/2011", "Jaguar Six 3.2 Sport", 43900.0, 1986, "44.830 km., κλιματισμός, αερόσακοι, ηλεκτρικά παράθυρα, συμπληρωμένο βιβλίο service.");
-        Sale newCarSale2 = new NewCarSale("05/11/2010", "Audi A6 1.9TDi Avant", 25000.0);
+        Sale usedCarSale2 = new UsedCarSale.Builder()
+                .date("12/07/2011")
+                .manufacturer("Jaguar Six 3.2 Sport")
+                .price(43900.0)
+                .modelYear(1986)
+                .conditionDescription("44.830 km., κλιματισμός, αερόσακοι, ηλεκτρικά παράθυρα, συμπληρωμένο βιβλίο service.")
+                .build();
+        Sale newCarSale2 = new NewCarSale.Builder()
+                .date("05/11/2010")
+                .manufacturer("Audi A6 1.9TDi Avant")
+                .price(25000.0)
+                .build();
         db.newSale(1, usedCarSale2);
         db.newSale(1, newCarSale2);
 
-        // Εμφάνιση των στοιχείων των πελατών και των πωλήσεών τους
+        // Display customer and sales details
         for (int i = 0; i < db.getNoOfCustomers(); i++) {
             Customer customer = db.getCustomer(i);
             System.out.println(customer.getName());
@@ -29,10 +51,10 @@ public class Main {
                 System.out.println(corpCust.getContactName());
                 System.out.println(corpCust.getContactPhone());
             }
-            for (Sale sale : db.getSales(i)) {
+            List<Sale> sales = db.getSales(i);
+            for (Sale sale : sales) {
                 System.out.println(sale.getDate() + " " + sale.getManufacturer() + ", " + sale.getPrice() + " Euro.");
-                if (sale instanceof UsedCarSale) {
-                    UsedCarSale usedCar = (UsedCarSale) sale;
+                if (sale instanceof UsedCarSale usedCar) {
                     System.out.println(usedCar.getConditionDescription());
                 }
             }

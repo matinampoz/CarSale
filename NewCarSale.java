@@ -1,6 +1,12 @@
+/**
+ * Class representing a sale of a new car.
+ */
+
 public class NewCarSale extends Sale{
-    public NewCarSale(String date, String manufacturer, double price) {
-        super(date, manufacturer, price);
+
+    public NewCarSale(Builder builder) {
+
+        super(builder);
     }
 
     @Override
@@ -12,5 +18,21 @@ public class NewCarSale extends Sale{
             year++;
         }
         return year;
+    }
+
+    /**
+     * Builder class for NewCarSale.
+     */
+    public static class Builder extends Sale.Builder<Builder> {
+
+        @Override
+        protected Builder self() {
+            return this;
+        }
+
+        @Override
+        public NewCarSale build() {
+            return new NewCarSale(this);
+        }
     }
 }
